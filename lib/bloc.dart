@@ -13,7 +13,7 @@ class Bloc extends Object with Validators implements BaseBloc {
   Stream<String> get email => _emailController.stream.transform(emailValidator);
   Stream<String> get password => _passwordController.stream.transform(passwordValidator);
 
-  Stream<bool> get submitChec => Observable.combineLatest2(email, password, (e, p) => true);
+  Stream<bool> get submitCheck => Observable.combineLatest2(email, password, (e, p) => true);
 
   submit() {
     print("xyz");
